@@ -6,6 +6,7 @@ const navLink = [
   { label: "Home", href: "/" },
   { label: "SignIn", href: "/signin" },
   { label: "Hotels", href: "/hotels" },
+  // { label: "Hotels", href: "/hotels/:id" },
 ];
 
 export default function TheHeader() {

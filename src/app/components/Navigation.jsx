@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "../page.module.css";
 import { usePathname } from "next/navigation";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Navigation({ links }) {
   const pathname = usePathname();
@@ -14,7 +15,7 @@ export default function Navigation({ links }) {
         return (
           <Link
             href={link.href}
-            key={link.label}
+            key={uuidv4()}
             className={isActive ? styles.active : styles.link}
           >
             {link.label}
