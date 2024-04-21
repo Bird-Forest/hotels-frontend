@@ -68,8 +68,27 @@
 .hotels {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: max-content;
+  grid-template-rows: 40px 1fr;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
   background-color: cornflowerblue;
+  padding: 0;
+  margin: 0 auto;
+}
+.create {
+  display: grid;
+  width: 160px;
+  /* grid-template-colu: 40px; */
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: clamp(14px, 0.83rem + 0.23vw, 16px);
+  font-weight: 400;
+  text-decoration: none;
+  color: chartreuse;
+  background-color: coral;
 }
 .list {
   display: grid;
@@ -168,6 +187,15 @@
   font-size: 12px;
   font-weight: 400;
   color: rgb(183, 99, 21);
+}
+
+/* ***** CREATE HOTEL ***** */
+
+.hotelform {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 40px);
+  gap: 8px;
 }
 
 /* .description {
