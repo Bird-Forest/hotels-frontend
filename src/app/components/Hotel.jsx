@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../page.module.css";
+import styles from "./Hotel.module.css";
 
 export default function Hotel({ hotel }) {
   return (

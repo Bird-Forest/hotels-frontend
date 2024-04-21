@@ -1,0 +1,62 @@
+.card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 28px 20px 20px 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 24px;
+  grid-gap: 8px;
+  padding: 8px 8px 20px 8px;
+}
+.image {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 560px);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  block-size: auto;
+  aspect-ratio: 1/0.6;
+  border-radius: 16px;
+}
+.name {
+  display: grid;
+  grid-template-columns: auto;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: #4527a0;
+}
+.country {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  font-size: clamp(16px, 0.955rem + 0.23vw, 18px);
+  font-weight: 400;
+  color: #424242;
+}
+.adress {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  font-size: clamp(14px, 0.83rem + 0.23vw, 16px);
+  font-weight: 100;
+  color: #424242;
+}
+.web {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: start;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #424242;
+}

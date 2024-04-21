@@ -2,28 +2,26 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 60px;
+  justify-content: center;
+  align-items: center;
   background-color: blueviolet;
 }
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh;
+  justify-content: center;
+  align-items: start;
   padding: 0;
-  width: 100%;
-  height: 100vh;
   margin: 0 auto;
   background-color: aqua;
 }
 
+/* ***** PAGE ***** */
 .home {
   display: grid;
-  /* grid-template-columns: 300px;
-  grid-template-rows: 600px; */
-
   background-color: bisque;
 }
-
 .signin {
   display: grid;
   grid-template-columns: 300px;
@@ -31,26 +29,39 @@
   background-color: chartreuse;
 }
 
-.navigate {
-  display: flex;
-  justify-content: center;
+.createpage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr;
+  justify-content: start;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
+  padding: 16px 8px;
+  margin: 0 auto;
+  background-color: #ede7f6;
 }
 
-.link {
-  color: #fafafa;
-  font-size: 24px;
-  font-weight: 500;
+.editpage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 8px;
+  margin: 0 auto;
+  background-color: #fff59d;
 }
 
-.active {
-  color: yellow;
-  cursor: default;
+.titlepage {
+  display: grid;
+  font-size: clamp(20px, 1.159rem + 0.45vw, 24px);
+  font-weight: 700;
+  color: #424242;
+  text-align: center;
 }
 
 /* ******   LOADING  *******/
-
 .loading {
   position: fixed;
   top: 0;
@@ -64,31 +75,36 @@
   background-color: rgba(189, 189, 189, 0.5);
 }
 
-/* ******   HOTEL  *******/
-.hotels {
+/* ******   HOTEL LICT  *******/
+.hotelspage {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40px 1fr;
+  grid-template-rows: 48px 1fr;
   justify-content: start;
   align-items: center;
-  gap: 16px;
   background-color: cornflowerblue;
   padding: 0;
   margin: 0 auto;
 }
-.create {
+.wraplink {
   display: grid;
-  width: 160px;
-  /* grid-template-colu: 40px; */
   justify-content: center;
   align-items: center;
-  padding: 8px;
+  padding: 4px;
+}
+.btncreate {
+  display: grid;
+  grid-template-columns: 160px;
+  grid-template-rows: 40px;
+  justify-content: center;
+  align-items: center;
   border-radius: 20px;
   font-size: clamp(14px, 0.83rem + 0.23vw, 16px);
-  font-weight: 400;
+  font-weight: 700;
+  text-align: center;
   text-decoration: none;
-  color: chartreuse;
-  background-color: coral;
+  color: #7fff00;
+  background-color: #ff7f50;
 }
 .list {
   display: grid;
@@ -114,7 +130,54 @@
   grid-template-columns: auto;
   grid-template-rows: auto;
 }
-.card {
+
+/* ***** HOTEL ID ***** */
+.idpage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 48px;
+  justify-content: start;
+  align-items: center;
+  background-color: #ffee58;
+  gap: 8px;
+  padding: 16px 8px;
+  margin: 0 auto;
+}
+.wrapbtn {
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr;
+  grid-template-rows: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  gap: 8px;
+}
+.btnid {
+  display: grid;
+  grid-template-columns: 80px;
+  grid-template-rows: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: clamp(14px, 0.83rem + 0.23vw, 16px);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  outline: #ff7f50;
+  border: none;
+  color: #7fff00;
+  background-color: #ff7f50;
+}
+.textor {
+  font-size: clamp(20px, 1.159rem + 0.45vw, 24px);
+  font-weight: 700;
+  text-align: center;
+  color: #424242;
+  padding: 0;
+  margin: 0;
+}
+
+/* .card {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 1fr 28px 24px 24px 24px;
@@ -136,17 +199,7 @@
   aspect-ratio: 1/0.6;
   border-radius: 16px;
 }
-/* .image {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  block-size: auto;
-  min-width: 280px;
-  aspect-ratio: 1/0.6;
-  border-radius: 16px;
-} */
+
 .name {
   display: grid;
   grid-template-columns: auto;
@@ -187,16 +240,7 @@
   font-size: 12px;
   font-weight: 400;
   color: rgb(183, 99, 21);
-}
-
-/* ***** CREATE HOTEL ***** */
-
-.hotelform {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 40px);
-  gap: 8px;
-}
+} */
 
 /* .description {
   display: inherit;

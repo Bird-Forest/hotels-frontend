@@ -4,9 +4,8 @@ import styles from "../page.module.css";
 
 const navLink = [
   { label: "Home", href: "/" },
-  { label: "SignIn", href: "/signin" },
   { label: "Hotels", href: "/hotels" },
-  // { label: "Hotels", href: "/hotels/:id" },
+  { label: "SignIn", href: "/signin" },
 ];
 
 export default function TheHeader() {

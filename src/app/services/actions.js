@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 export async function getAllList() {
   const response = await fetch("http://localhost:3300/api/hotels");
@@ -26,16 +27,16 @@ export async function addHotel(formData) {
     body: JSON.stringify({ imgUrl, name, country, city, adress, tel, website }),
   });
   const hotel = await response.json();
-  console.log(hotel);
+  // console.log(hotel);
   redirect("/hotels");
   // redirect(`/hotels/${hotel._id}`);
 }
 
 export async function updateHotel(formData) {
   // "use server";
-  const { imgUrl, name, country, city, adress, tel, website } =
+  const { imgUrl, name, country, city, adress, tel, website, id } =
     Object.fromEntries(formData);
-  const response = await fetch("http://localhost:3300/api/hotels", {
+  const response = await fetch(`http://localhost:3300/api/hotels/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -44,8 +45,10 @@ export async function updateHotel(formData) {
   });
   const hotel = await response.json();
   console.log(hotel);
+
+  revalidatePath(`/hotels/${hotel.id}`);
+  revalidatePath("/hotels", "page");
   redirect("/hotels");
-  // redirect(`/hotels/${hotel._id}`);
 }
 
 export async function removeHotel(id) {

@@ -1,0 +1,42 @@
+.formhotel {
+  display: grid;
+  grid-template-columns: minmax(272px, 408px);
+  grid-template-rows: repeat(8, 40px);
+  gap: 8px;
+  background-color: #d1c4e9;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 0 auto;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 8px;
+  padding: 4px 8px;
+  outline: #d1c4e9;
+  border: 1px solid #d1c4e9;
+  background-color: #ffffff;
+  font-size: clamp(14px, 0.83rem + 0.23vw, 16px);
+  color: #424242;
+}
+
+.submit {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.save {
+  background-color: #7e57c2;
+  font-size: clamp(14px, 0.83rem + 0.23vw, 16px);
+  border-radius: 8px;
+  /* padding: 4px 8px; */
+  outline: #d1c4e9;
+  border: 1px solid #d1c4e9;
+  color: #ffffff;
+  cursor: pointer;
+}
+.save:hover,
+.save:focus {
+  background-color: #673ab7;
+}

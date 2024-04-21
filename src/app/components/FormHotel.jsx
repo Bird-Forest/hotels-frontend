@@ -1,18 +1,20 @@
 // "use client";
 import React from "react";
-import styles from "../page.module.css";
+import styles from "./FormHotel.module.css";
+// import styles from "../page.module.css";
 
 export default function FormHotel({ onHotel, hotel }) {
-  console.log("I am Server component");
+  console.log("FORM Server component");
 
   return (
-    <form className={styles.hotelform} action={onHotel}>
+    <form className={styles.formhotel} action={onHotel}>
       <input
         type="text"
         placeholder="imgUrl"
         required
         name="imgUrl"
         defaultValue={!hotel ? null : hotel.imgUrl}
+        className={styles.input}
       />
       <input
         type="text"
@@ -20,6 +22,7 @@ export default function FormHotel({ onHotel, hotel }) {
         required
         name="name"
         defaultValue={!hotel ? null : hotel.name}
+        className={styles.input}
       />
       <input
         type="text"
@@ -27,6 +30,7 @@ export default function FormHotel({ onHotel, hotel }) {
         required
         name="country"
         defaultValue={!hotel ? null : hotel.country}
+        className={styles.input}
       />
       <input
         type="text"
@@ -34,6 +38,7 @@ export default function FormHotel({ onHotel, hotel }) {
         required
         name="city"
         defaultValue={!hotel ? null : hotel.city}
+        className={styles.input}
       />
       <input
         type="text"
@@ -41,6 +46,7 @@ export default function FormHotel({ onHotel, hotel }) {
         required
         name="adress"
         defaultValue={!hotel ? null : hotel.adress}
+        className={styles.input}
       />
       <input
         type="text"
@@ -48,6 +54,7 @@ export default function FormHotel({ onHotel, hotel }) {
         required
         name="tel"
         defaultValue={!hotel ? null : hotel.tel}
+        className={styles.input}
       />
       <input
         type="text"
@@ -55,10 +62,11 @@ export default function FormHotel({ onHotel, hotel }) {
         required
         name="website"
         defaultValue={!hotel ? null : hotel.website}
+        className={styles.input}
       />
-
-      <div>
-        <input type="submit" value="save" />
+      {/* <input type="hidden" name="id" value={hotel.id} /> */}
+      <div className={styles.submit}>
+        <input type="submit" value="save" className={styles.save} />
       </div>
     </form>
   );

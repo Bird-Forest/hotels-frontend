@@ -17,10 +17,12 @@ export default async function HotelsPage() {
   const hotels = await getAllList();
 
   return (
-    <div className={styles.hotels}>
-      <Link href="/hotels/create" className={styles.create}>
-        Add new hotel
-      </Link>
+    <div className={styles.hotelspage}>
+      <div className={styles.wraplink}>
+        <Link href="/hotels/create" className={styles.btncreate}>
+          add hotel
+        </Link>
+      </div>
       <ul className={styles.list}>
         {hotels.map((hotel) => {
           return (
