@@ -2,6 +2,7 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import TheHeader from "./components/TheHeader";
 import styles from "./page.module.css";
+import { Providers } from "./components/Providers";
 // import styles from "./global.css";
 
 const inter = Inter({
@@ -25,8 +26,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${roboto_mono.variable}`}>
       <body>
-        <TheHeader />
-        <main className={styles.main}>{children}</main>
+        <Providers>
+          <TheHeader />
+          <main className={styles.main}>{children}</main>
+        </Providers>
       </body>
     </html>
   );

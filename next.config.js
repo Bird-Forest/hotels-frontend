@@ -5,8 +5,14 @@ module.exports = {
         protocol: "https",
         hostname: "cdn.pixabay.com",
         port: "",
-        // pathname: "/hotels",
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        port: "",
       },
     ],
   },
 };
+
+// hostname "lh3.googleusercontent.com"

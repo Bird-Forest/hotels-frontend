@@ -1,11 +1,13 @@
 import React from "react";
-import styles from "../page.module.css";
-
-export const metadata = {
-  title: "Login page",
-  description: "User registration",
-};
+import { GoogleBtn } from "../components/GoogleBtn";
+import SignInForm from "../components/SignInForm";
 
 export default function SignIn() {
-  return <div className={styles.signin}>page</div>;
+  return (
+    <div>
+      <h2>Sign In</h2>
+      <SignInForm />
+      <GoogleBtn />
+    </div>
+  );
 }
