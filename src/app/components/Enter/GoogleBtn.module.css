@@ -1,0 +1,29 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+}
+.googleicon {
+  width: 40px;
+  height: 40px;
+}
+.googlebtn {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: #ffffff;
+  font-size: clamp(16px, 0.955rem + 0.23vw, 18px);
+  border-radius: 32px;
+  outline: #ffffff;
+  border: 1px solid #ffffff;
+  color: #424242;
+  padding: 16px 24px;
+  cursor: pointer;
+}

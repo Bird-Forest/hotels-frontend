@@ -1,0 +1,21 @@
+.navigate {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 48px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(20px, 1.159rem + 0.45vw, 24px);
+  font-weight: 700;
+  gap: 8px;
+  padding: 4px 16px;
+}
+
+.link {
+  color: #fafafa;
+}
+
+.active {
+  color: #7fff00;
+  cursor: default;
+}

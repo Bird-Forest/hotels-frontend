@@ -2,15 +2,15 @@
 
 import Link from "next/link";
 import React from "react";
-import styles from "./Navigat.module.css";
+import styles from "./Navigation.module.css";
 import { usePathname } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
-import { useSession, signOut } from "next-auth/react";
+// import { useSession, signOut } from "next-auth/react";
 
 export default function Navigation({ links }) {
   const pathname = usePathname();
-  // ** тільки для клієнтських компонентів!!!
-  const session = useSession();
+  // // ** тільки для клієнтських компонентів!!!
+  // const session = useSession();
 
   return (
     <div className={styles.navigate}>
@@ -26,9 +26,9 @@ export default function Navigation({ links }) {
           </Link>
         );
       })}
-      {session?.data && (
+      {/* {session?.data && (
         <Link href="/profile" className={styles.link}>
-          Profile
+          profile
         </Link>
       )}
       {session.data ? (
@@ -37,13 +37,13 @@ export default function Navigation({ links }) {
           onClick={() => signOut({ callbackUrl: "/" })}
           className={styles.link}
         >
-          Sign Out
+          sign out
         </Link>
       ) : (
-        <Link href="/signin" className={styles.link}>
-          Sign In
+        <Link href="/enter" className={styles.link}>
+          enter
         </Link>
-      )}
+      )} */}
     </div>
   );
 }

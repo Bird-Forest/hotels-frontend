@@ -1,5 +1,7 @@
 // import { useSearchParams } from "next/navigation";
-import { signIn } from "../config/auth";
+import { signIn } from "../../config/auth";
+import { FcGoogle } from "react-icons/fc";
+import styles from "./GoogleBtn.module.css";
 
 export function GoogleBtn() {
   // const searchParams = useSearchParams();
@@ -10,8 +12,12 @@ export function GoogleBtn() {
         "use server";
         await signIn("google", { redirectTo: "/hotels" });
       }}
+      className={styles.form}
     >
-      <button type="submit">Signin with Google</button>
+      <button type="submit" className={styles.googlebtn}>
+        <FcGoogle className={styles.googleicon} />
+        Signin with Google
+      </button>
     </form>
   );
 }

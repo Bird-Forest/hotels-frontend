@@ -24,8 +24,13 @@
 }
 .signin {
   display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 600px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px auto 1fr;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 8px;
+  margin: 0 auto;
   background-color: chartreuse;
 }
 

@@ -1,5 +1,5 @@
 import { getHotel, updateHotel } from "../../../services/actions";
-import FormHotel from "../../../components/FormHotel";
+import FormHotel from "../../../components/Hotels/FormHotel";
 import styles from "../../../page.module.css";
 import React from "react";
 

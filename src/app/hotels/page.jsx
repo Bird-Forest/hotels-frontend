@@ -2,16 +2,16 @@ import React from "react";
 import styles from "../page.module.css";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
-import Hotel from "../components/Hotel";
+import Hotel from "../components/Hotels/Hotel";
 import { getAllList } from "../services/actions";
-import { revalidatePath } from "next/cache";
+// import { revalidatePath } from "next/cache";
 
 export const metadata = {
   title: "Hotels page",
   description: "list of hotels, hotel description",
 };
 
-revalidatePath("/hotels", "page");
+// revalidatePath("/hotels", "page");
 
 export default async function HotelsPage() {
   const hotels = await getAllList();

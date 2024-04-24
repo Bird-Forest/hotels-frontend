@@ -1,6 +1,6 @@
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import TheHeader from "./components/TheHeader";
+import TheHeader from "./components/Header/TheHeader";
 import styles from "./page.module.css";
 import { Providers } from "./components/Providers";
 // import styles from "./global.css";

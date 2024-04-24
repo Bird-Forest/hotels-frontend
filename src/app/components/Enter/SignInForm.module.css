@@ -1,0 +1,40 @@
+.form {
+  display: grid;
+  grid-template-columns: minmax(272px, 354px);
+  grid-template-rows: auto auto 40px;
+  gap: 16px;
+  background-color: #e3f2fd;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.label {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 16px 40px;
+  gap: 4px;
+}
+.input {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 8px;
+  padding: 4px 8px;
+  outline: #e3f2fd;
+  border: 1px solid #e3f2fd;
+  background-color: #ffffff;
+  font-size: clamp(14px, 0.83rem + 0.23vw, 16px);
+  color: #424242;
+}
+.save {
+  background-color: #bbdefb;
+  font-size: clamp(14px, 0.83rem + 0.23vw, 16px);
+  border-radius: 8px;
+  outline: #bbdefb;
+  border: 1px solid #bbdefb;
+  color: #ffffff;
+  cursor: pointer;
+}
+.save:hover,
+.save:focus {
+  background-color: #64b5f6;
+}

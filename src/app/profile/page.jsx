@@ -1,5 +1,5 @@
 import React from "react";
-import { getServerSession, useSession } from "next-auth/react";
+// import { getServerSession, useSession } from "next-auth/react";
 import { auth } from "../config/auth";
 import Image from "next/image";
 

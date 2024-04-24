@@ -28,6 +28,7 @@ export async function addHotel(formData) {
   });
   const hotel = await response.json();
   // console.log(hotel);
+  revalidatePath("/hotels", "page");
   redirect("/hotels");
   // redirect(`/hotels/${hotel._id}`);
 }
@@ -60,6 +61,7 @@ export async function removeHotel(id) {
     },
   });
 
+  revalidatePath("/hotels", "page");
   // revalidatePath("/blog");
   redirect("/hotels");
 }

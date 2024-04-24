@@ -1,6 +1,6 @@
 import React from "react";
 import { getHotel, removeHotel } from "../../services/actions";
-import Hotel from "../../components/Hotel";
+import Hotel from "../../components/Hotels/Hotel";
 import Link from "next/link";
 import styles from "../../page.module.css";
 
