@@ -5,12 +5,13 @@ import React from "react";
 import styles from "./Navigation.module.css";
 import { usePathname } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
-// import { useSession, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 export default function Navigation({ links }) {
   const pathname = usePathname();
   // // ** тільки для клієнтських компонентів!!!
-  // const session = useSession();
+  const session = useSession();
+  console.log(session);
 
   return (
     <div className={styles.navigate}>
@@ -26,7 +27,7 @@ export default function Navigation({ links }) {
           </Link>
         );
       })}
-      {/* {session?.data && (
+      {session?.data && (
         <Link href="/profile" className={styles.link}>
           profile
         </Link>
@@ -43,7 +44,7 @@ export default function Navigation({ links }) {
         <Link href="/enter" className={styles.link}>
           enter
         </Link>
-      )} */}
+      )}
     </div>
   );
 }

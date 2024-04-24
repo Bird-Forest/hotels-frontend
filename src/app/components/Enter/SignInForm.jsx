@@ -1,15 +1,18 @@
 import React from "react";
-import { signIn } from "../../config/auth";
+// import { signIn } from "../../config/auth";
 import styles from "./SignInForm.module.css";
+import { signin } from "../../services/authactions";
 
 export default function SignInForm() {
   return (
     <>
       <form
-        action={async (formData) => {
-          "use server";
-          await signIn("credentials", formData);
-        }}
+        // action={async (formData) => {
+        //   "use server";
+        //   await signIn("credentials", formData);
+        // }}
+        action={signin}
+        // action={signIn}
         className={styles.form}
       >
         <label className={styles.label}>

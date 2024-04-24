@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export default async function Profile() {
   const session = await auth();
-  const user = session.user;
-  console.log("USER", user);
+  // const user = session.user;
+  console.log("USER", session);
   return (
     <div>
-      <h3>Hello {user.name}</h3>
+      {/* <h3>Hello {user.name}</h3>
       {user.image && (
         <Image
           src={user.image}
@@ -21,7 +21,7 @@ export default async function Profile() {
           }}
           priority
         />
-      )}
+      )} */}
     </div>
   );
 }

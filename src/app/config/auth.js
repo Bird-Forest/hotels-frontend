@@ -3,7 +3,7 @@ import Google from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
 import { ZodError } from "zod";
 import { signInSchema } from "../lib/validSignIn";
-import { getUserFromDb } from "../services/authactions";
+import { signin } from "../services/authactions";
 // import { User } from "next-auth";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -19,6 +19,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         email: {},
         password: {},
       },
+      // credentials: { formData },
       authorize: async (credentials) => {
         try {
           let user = null;
@@ -31,7 +32,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           // const pwHash = saltAndHashPassword(password);
 
           // logic to verify if user exists
-          user = await getUserFromDb(email, password);
+          user = await signin({ email, password });
 
           if (!user) {
             throw new Error("User not found.");
